@@ -2,8 +2,8 @@ package com.winston.Trabalho.entidade;
 
 import java.io.Serializable;
 
-public class usuario implements Serializable {
-	private static final long serialVersionUID = 1L;
+public class usuario implements Serializable { // Serializable e para tranforma os objetos em bits para trafegar na rede
+	private static final long serialVersionUID = 1L; //  numero de serie padrao do Serializable 1L
 	
 	private long id;
 	private String nome;
@@ -63,7 +63,7 @@ public class usuario implements Serializable {
 		this.senha = senha;
 	}
 
-	@Override
+	@Override  // 
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;

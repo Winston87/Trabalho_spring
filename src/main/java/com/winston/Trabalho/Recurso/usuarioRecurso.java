@@ -7,16 +7,16 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.winston.Trabalho.entidade.usuario;
 
-@RestController
-@RequestMapping(value = "/users")
+@RestController //esta anotaçao fala que e um recurso web que e controlado pelo um recurso rest
+@RequestMapping(value = "/users") // nome do recurso rest usado na web
 public class usuarioRecurso {
 	
-	@GetMapping
-	public ResponseEntity<usuario> findAll(){
+	@GetMapping // indica um tipo get do http 
+	public ResponseEntity<usuario> retornoUser(){ // ResponseEntity e um tipo especifico de retorna resposta web
 		
 		usuario user = new usuario(10L, "wisnton", "wisnton@gmail.com", "985928739", "0000");
 		
-		return ResponseEntity.ok().body(user);
+		return ResponseEntity.ok().body(user); // ResponseEntity este retorna a respsota com sucesso body respota o corpo da respota
 	}
 
 }
